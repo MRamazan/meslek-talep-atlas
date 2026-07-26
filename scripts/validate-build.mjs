@@ -42,9 +42,19 @@ for (const file of htmlFiles) {
 }
 const expectedHtml = 1 + 17 + 44 + 1 + 1;
 if (htmlFiles.length !== expectedHtml) errors.push(`HTML sayısı ${htmlFiles.length}, beklenen ${expectedHtml}`);
-for (const required of ['sitemap.xml', 'robots.txt', '404.html', '_astro/site.css', 'favicon.svg']) {
+for (const required of ['sitemap.xml', 'robots.txt', '404.html', 'favicon.svg']) {
   if (!fs.existsSync(path.join(dist, required))) errors.push(`Eksik çıktı: ${required}`);
 }
+
+const astroAssetsDir = path.join(dist, '_astro');
+const hasCssAsset =
+  fs.existsSync(astroAssetsDir) &&
+  fs.readdirSync(astroAssetsDir, { withFileTypes: true }).some(
+    (entry) => entry.isFile() && entry.name.endsWith('.css'),
+  );
+
+if (!hasCssAsset) errors.push('Eksik çıktı: _astro altında CSS dosyası bulunamadı');
+
 if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
