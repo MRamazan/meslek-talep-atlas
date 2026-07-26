@@ -1,0 +1,14 @@
+---
+import { withBase } from '../lib/site.js';
+const { category } = Astro.props;
+---
+<article class="card category-card" data-filter-item data-search={`${category.name} ${category.topProfessions.map((p) => p.name).join(' ')}`.toLocaleLowerCase('tr-TR')}>
+  <div class="card-title">
+    <h3><a href={withBase(`/kategori/${category.slug}/`)}>{category.name}</a></h3>
+    <span class="badge">{category.jobCount} ilan</span>
+  </div>
+  <div class="card-meta"><span>{category.professionCount} meslek</span></div>
+  <ul class="card-list">
+    {category.topProfessions.map((profession) => <li>{profession.name} ({profession.count})</li>)}
+  </ul>
+</article>

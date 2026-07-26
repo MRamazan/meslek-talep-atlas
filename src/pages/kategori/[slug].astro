@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ProfessionCard from '../../components/ProfessionCard.astro';
+import SearchBox from '../../components/SearchBox.astro';
+import StatItem from '../../components/StatItem.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import categories from '../../data/categories.json';
+import professions from '../../data/professions.json';
+import { withBase } from '../../lib/site.js';
+
+export function getStaticPaths() {
+  return categories.map((category) => ({ params: { slug: category.slug }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const categoryProfessions = professions.filter((profession) => profession.categorySlug === category.slug).sort((a, b) => b.count - a.count);
+---
+<BaseLayout title={category.name} description={`${category.name} kategorisindeki ${category.professionCount} meslek ve ${category.jobCount} ilana dayalı talep analizi.`} path={`/kategori/${category.slug}/`}>
+  <Breadcrumbs items={[{ label: 'Ana sayfa', href: withBase('/') }, { label: category.name }]} />
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Ana kategori</p>
+      <h1>{category.name}</h1>
+      <p class="lead">{category.description}</p>
+    </div>
+  </header>
+  <section class="section compact">
+    <div class="container stats">
+      <StatItem value={category.jobCount} label="ilan" />
+      <StatItem value={category.professionCount} label="alt meslek" />
+      <StatItem value={Math.min(...categoryProfessions.map((p) => p.count))} label="en küçük örneklem" />
+      <StatItem value={Math.max(...categoryProfessions.map((p) => p.count))} label="en büyük örneklem" />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <SearchBox id="profession-filter" label="Meslekleri filtrele" placeholder="Meslek adı veya beceri yazın" help="Filtre, bu kategorideki meslek adlarını, kısa özetleri ve öne çıkan becerileri tarar." />
+      <div class="grid professions" style="margin-top: 1rem;">
+        {categoryProfessions.map((profession) => <ProfessionCard profession={profession} />)}
+      </div>
+      <EmptyState id="profession-empty" message="Bu kategori içinde aramanızla eşleşen meslek bulunamadı." />
+    </div>
+  </section>
+  <script is:inline>
+    (() => {
+      const input = document.querySelector('#profession-filter');
+      const items = [...document.querySelectorAll('[data-filter-item]')];
+      const empty = document.querySelector('#profession-empty');
+      if (!input) return;
+      const normalize = (value) => value.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      input.addEventListener('input', () => {
+        const query = normalize(input.value.trim());
+        let visible = 0;
+        items.forEach((item) => {
+          const match = !query || normalize(item.dataset.search || '').includes(query);
+          item.hidden = !match;
+          if (match) visible += 1;
+        });
+        if (empty) empty.hidden = visible !== 0;
+      });
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,13 @@
+---
+import { withBase } from '../lib/site.js';
+const { profession } = Astro.props;
+const skills = profession.topSkills.slice(0, 5);
+---
+<article class="card profession-card" data-filter-item data-search={`${profession.name} ${skills.map((s) => s.name).join(' ')} ${profession.summary}`.toLocaleLowerCase('tr-TR')}>
+  <div class="card-title">
+    <h3><a href={withBase(`/meslek/${profession.slug}/`)}>{profession.name}</a></h3>
+    <span class="badge">{profession.count} ilan</span>
+  </div>
+  <p class="muted">{profession.summary}</p>
+  {skills.length > 0 && <div class="card-meta">{skills.map((skill) => <span>{skill.name}</span>)}</div>}
+</article>

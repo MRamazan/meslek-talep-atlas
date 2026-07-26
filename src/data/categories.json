@@ -1,0 +1,418 @@
+[
+  {
+    "name": "Araştırma, Bilim ve Laboratuvar",
+    "slug": "arastirma-bilim-ve-laboratuvar",
+    "jobCount": 8,
+    "professionCount": 1,
+    "description": "Bu kategori 8 ilanı ve 1 alt mesleği bir araya getirir. Örneklemde Endüstriyel Ar-Ge, Ürün ve İnovasyon Yönetimi başlıkları bulunur. Kategori genelinde LLM, A/B Testing ve Python en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "endustriyel-ar-ge-urun-ve-inovasyon-yonetimi"
+    ],
+    "topProfessions": [
+      {
+        "name": "Endüstriyel Ar-Ge, Ürün ve İnovasyon Yönetimi",
+        "slug": "endustriyel-ar-ge-urun-ve-inovasyon-yonetimi",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "name": "BT Altyapı, Sistem ve Destek",
+    "slug": "bt-altyapi-sistem-ve-destek",
+    "jobCount": 28,
+    "professionCount": 3,
+    "description": "Bu kategori 28 ilanı ve 3 alt mesleği bir araya getirir. Örneklemde Ağ ve Telekom Sistemleri, Sistem Yönetimi ve Altyapı ve BT, Kullanıcı ve Teknik Destek başlıkları bulunur. Kategori genelinde Linux, Python ve Oracle en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "ag-ve-telekom-sistemleri",
+      "sistem-yonetimi-ve-altyapi",
+      "bt-kullanici-ve-teknik-destek"
+    ],
+    "topProfessions": [
+      {
+        "name": "Ağ ve Telekom Sistemleri",
+        "slug": "ag-ve-telekom-sistemleri",
+        "count": 10
+      },
+      {
+        "name": "Sistem Yönetimi ve Altyapı",
+        "slug": "sistem-yonetimi-ve-altyapi",
+        "count": 10
+      },
+      {
+        "name": "BT, Kullanıcı ve Teknik Destek",
+        "slug": "bt-kullanici-ve-teknik-destek",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "name": "Bulut, DevOps ve Platform",
+    "slug": "bulut-devops-ve-platform",
+    "jobCount": 22,
+    "professionCount": 2,
+    "description": "Bu kategori 22 ilanı ve 2 alt mesleği bir araya getirir. Örneklemde DevOps Mühendisliği ve Bulut Mühendisliği ve Çözüm Mimarisi başlıkları bulunur. Kategori genelinde DevOps, CI/CD ve Kubernetes en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "devops-muhendisligi",
+      "bulut-muhendisligi-ve-cozum-mimarisi"
+    ],
+    "topProfessions": [
+      {
+        "name": "DevOps Mühendisliği",
+        "slug": "devops-muhendisligi",
+        "count": 14
+      },
+      {
+        "name": "Bulut Mühendisliği ve Çözüm Mimarisi",
+        "slug": "bulut-muhendisligi-ve-cozum-mimarisi",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "name": "Elektrik, Elektronik, Gömülü Sistemler ve Otomasyon",
+    "slug": "elektrik-elektronik-gomulu-sistemler-ve-otomasyon",
+    "jobCount": 29,
+    "professionCount": 3,
+    "description": "Bu kategori 29 ilanı ve 3 alt mesleği bir araya getirir. Örneklemde Gömülü Sistemler, Entegrasyon ve Doğrulama, Elektrik, Elektronik ve Donanım Mühendisliği ve Endüstriyel Otomasyon ve Robotik başlıkları bulunur. Kategori genelinde C++, Git ve Linux en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "gomulu-sistemler-entegrasyon-ve-dogrulama",
+      "elektrik-elektronik-ve-donanim-muhendisligi",
+      "endustriyel-otomasyon-ve-robotik"
+    ],
+    "topProfessions": [
+      {
+        "name": "Gömülü Sistemler, Entegrasyon ve Doğrulama",
+        "slug": "gomulu-sistemler-entegrasyon-ve-dogrulama",
+        "count": 11
+      },
+      {
+        "name": "Elektrik, Elektronik ve Donanım Mühendisliği",
+        "slug": "elektrik-elektronik-ve-donanim-muhendisligi",
+        "count": 9
+      },
+      {
+        "name": "Endüstriyel Otomasyon ve Robotik",
+        "slug": "endustriyel-otomasyon-ve-robotik",
+        "count": 9
+      }
+    ]
+  },
+  {
+    "name": "Finans, Risk, Denetim ve Uyum",
+    "slug": "finans-risk-denetim-ve-uyum",
+    "jobCount": 16,
+    "professionCount": 2,
+    "description": "Bu kategori 16 ilanı ve 2 alt mesleği bir araya getirir. Örneklemde FP&A, Bütçe ve Yönetim Raporlama ve Risk, Denetim ve Uyum başlıkları bulunur. Kategori genelinde Excel, SAP ve SQL en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "fp-a-butce-ve-yonetim-raporlama",
+      "risk-denetim-ve-uyum"
+    ],
+    "topProfessions": [
+      {
+        "name": "FP&A, Bütçe ve Yönetim Raporlama",
+        "slug": "fp-a-butce-ve-yonetim-raporlama",
+        "count": 8
+      },
+      {
+        "name": "Risk, Denetim ve Uyum",
+        "slug": "risk-denetim-ve-uyum",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "name": "Kalite Yönetimi ve Güvence",
+    "slug": "kalite-yonetimi-ve-guvence",
+    "jobCount": 8,
+    "professionCount": 1,
+    "description": "Bu kategori 8 ilanı ve 1 alt mesleği bir araya getirir. Örneklemde Kalite Mühendisliği, NPI ve Tasarım Kalitesi başlıkları bulunur. Kategori genelinde Excel ve SAP en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "kalite-muhendisligi-npi-ve-tasarim-kalitesi"
+    ],
+    "topProfessions": [
+      {
+        "name": "Kalite Mühendisliği, NPI ve Tasarım Kalitesi",
+        "slug": "kalite-muhendisligi-npi-ve-tasarim-kalitesi",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "name": "Makine, Tasarım ve Simülasyon",
+    "slug": "makine-tasarim-ve-simulasyon",
+    "jobCount": 12,
+    "professionCount": 1,
+    "description": "Bu kategori 12 ilanı ve 1 alt mesleği bir araya getirir. Örneklemde Mekanik Tasarım ve Ürün Geliştirme başlıkları bulunur. Kategori genelinde AutoCAD, Python ve Git en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "mekanik-tasarim-ve-urun-gelistirme"
+    ],
+    "topProfessions": [
+      {
+        "name": "Mekanik Tasarım ve Ürün Geliştirme",
+        "slug": "mekanik-tasarim-ve-urun-gelistirme",
+        "count": 12
+      }
+    ]
+  },
+  {
+    "name": "Operasyon, Lojistik ve Tedarik Zinciri",
+    "slug": "operasyon-lojistik-ve-tedarik-zinciri",
+    "jobCount": 13,
+    "professionCount": 1,
+    "description": "Bu kategori 13 ilanı ve 1 alt mesleği bir araya getirir. Örneklemde Müşteri Hizmetleri ve Destek başlıkları bulunur. Kategori genelinde Agile, Apache Spark ve Go en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "musteri-hizmetleri-ve-destek"
+    ],
+    "topProfessions": [
+      {
+        "name": "Müşteri Hizmetleri ve Destek",
+        "slug": "musteri-hizmetleri-ve-destek",
+        "count": 13
+      }
+    ]
+  },
+  {
+    "name": "Pazarlama, İçerik ve Tasarım",
+    "slug": "pazarlama-icerik-ve-tasarim",
+    "jobCount": 18,
+    "professionCount": 2,
+    "description": "Bu kategori 18 ilanı ve 2 alt mesleği bir araya getirir. Örneklemde Grafik ve İletişim Tasarımı ve Pazarlama Analitiği, İçgörü ve Performans başlıkları bulunur. Kategori genelinde SQL, Excel ve Looker en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "grafik-ve-iletisim-tasarimi",
+      "pazarlama-analitigi-icgoru-ve-performans"
+    ],
+    "topProfessions": [
+      {
+        "name": "Grafik ve İletişim Tasarımı",
+        "slug": "grafik-ve-iletisim-tasarimi",
+        "count": 9
+      },
+      {
+        "name": "Pazarlama Analitiği, İçgörü ve Performans",
+        "slug": "pazarlama-analitigi-icgoru-ve-performans",
+        "count": 9
+      }
+    ]
+  },
+  {
+    "name": "Satış, İş Geliştirme ve Müşteri Yönetimi",
+    "slug": "satis-is-gelistirme-ve-musteri-yonetimi",
+    "jobCount": 28,
+    "professionCount": 2,
+    "description": "Bu kategori 28 ilanı ve 2 alt mesleği bir araya getirir. Örneklemde Teknik Satış ve Çözüm Mühendisliği ve B2B Satış, Operasyon ve İş Geliştirme başlıkları bulunur. Kategori genelinde Excel, Agile ve Go en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "teknik-satis-ve-cozum-muhendisligi",
+      "b2b-satis-operasyon-ve-is-gelistirme"
+    ],
+    "topProfessions": [
+      {
+        "name": "Teknik Satış ve Çözüm Mühendisliği",
+        "slug": "teknik-satis-ve-cozum-muhendisligi",
+        "count": 18
+      },
+      {
+        "name": "B2B Satış, Operasyon ve İş Geliştirme",
+        "slug": "b2b-satis-operasyon-ve-is-gelistirme",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "name": "Siber Güvenlik",
+    "slug": "siber-guvenlik",
+    "jobCount": 24,
+    "professionCount": 2,
+    "description": "Bu kategori 24 ilanı ve 2 alt mesleği bir araya getirir. Örneklemde Bilgi Güvenliği, Yönetişim ve Uyum ve Ağ Güvenliği başlıkları bulunur. Kategori genelinde Cybersecurity, Linux ve HTML en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "bilgi-guvenligi-yonetisim-ve-uyum",
+      "ag-guvenligi"
+    ],
+    "topProfessions": [
+      {
+        "name": "Bilgi Güvenliği, Yönetişim ve Uyum",
+        "slug": "bilgi-guvenligi-yonetisim-ve-uyum",
+        "count": 14
+      },
+      {
+        "name": "Ağ Güvenliği",
+        "slug": "ag-guvenligi",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "name": "Veri ve Analitik",
+    "slug": "veri-ve-analitik",
+    "jobCount": 46,
+    "professionCount": 3,
+    "description": "Bu kategori 46 ilanı ve 3 alt mesleği bir araya getirir. Örneklemde Veri Analizi, İş Analitiği ve Danışmanlık, Veri Bilimi ve Veri Mühendisliği, Platform ve Veri Toplama başlıkları bulunur. Kategori genelinde SQL, Python ve Machine Learning en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "veri-analizi-is-analitigi-ve-danismanlik",
+      "veri-bilimi",
+      "veri-muhendisligi-platform-ve-veri-toplama"
+    ],
+    "topProfessions": [
+      {
+        "name": "Veri Analizi, İş Analitiği ve Danışmanlık",
+        "slug": "veri-analizi-is-analitigi-ve-danismanlik",
+        "count": 16
+      },
+      {
+        "name": "Veri Bilimi",
+        "slug": "veri-bilimi",
+        "count": 15
+      },
+      {
+        "name": "Veri Mühendisliği, Platform ve Veri Toplama",
+        "slug": "veri-muhendisligi-platform-ve-veri-toplama",
+        "count": 15
+      }
+    ]
+  },
+  {
+    "name": "Yapay Zekâ ve Makine Öğrenmesi",
+    "slug": "yapay-zeka-ve-makine-ogrenmesi",
+    "jobCount": 62,
+    "professionCount": 3,
+    "description": "Bu kategori 62 ilanı ve 3 alt mesleği bir araya getirir. Örneklemde AI Veri, Eğitim ve Değerlendirme, AI/ML ve Ürün Mühendisliği ve Generative AI, LLM ve NLP başlıkları bulunur. Kategori genelinde Python, LLM ve AWS en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "ai-veri-egitim-ve-degerlendirme",
+      "ai-ml-ve-urun-muhendisligi",
+      "generative-ai-llm-ve-nlp"
+    ],
+    "topProfessions": [
+      {
+        "name": "AI Veri, Eğitim ve Değerlendirme",
+        "slug": "ai-veri-egitim-ve-degerlendirme",
+        "count": 33
+      },
+      {
+        "name": "AI/ML ve Ürün Mühendisliği",
+        "slug": "ai-ml-ve-urun-muhendisligi",
+        "count": 21
+      },
+      {
+        "name": "Generative AI, LLM ve NLP",
+        "slug": "generative-ai-llm-ve-nlp",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "name": "Yazılım Geliştirme",
+    "slug": "yazilim-gelistirme",
+    "jobCount": 132,
+    "professionCount": 11,
+    "description": "Bu kategori 132 ilanı ve 11 alt mesleği bir araya getirir. Örneklemde Mobil Uygulama Geliştirme, Genel ve Web Full Stack Geliştirme ve Oyun Yazılımı ve Oyun Motorları başlıkları bulunur. Kategori genelinde CI/CD, Git ve C# en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "mobil-uygulama-gelistirme",
+      "genel-ve-web-full-stack-gelistirme",
+      "oyun-yazilimi-ve-oyun-motorlari",
+      "java-backend-gelistirme",
+      "erp-sap-ve-uretim-sistemleri-gelistirme",
+      "net-c-gelistirme",
+      "net-full-stack-gelistirme",
+      "dikey-sektor-ve-is-sistemleri-gelistirme",
+      "yazilim-mimarisi-sistem-tasarimi-ve-genel-muhendislik",
+      "backend-ve-api-gelistirme",
+      "python-gelistirme"
+    ],
+    "topProfessions": [
+      {
+        "name": "Mobil Uygulama Geliştirme",
+        "slug": "mobil-uygulama-gelistirme",
+        "count": 17
+      },
+      {
+        "name": "Genel ve Web Full Stack Geliştirme",
+        "slug": "genel-ve-web-full-stack-gelistirme",
+        "count": 16
+      },
+      {
+        "name": "Oyun Yazılımı ve Oyun Motorları",
+        "slug": "oyun-yazilimi-ve-oyun-motorlari",
+        "count": 15
+      },
+      {
+        "name": "Java Backend Geliştirme",
+        "slug": "java-backend-gelistirme",
+        "count": 14
+      }
+    ]
+  },
+  {
+    "name": "Yazılım Kalite ve Test",
+    "slug": "yazilim-kalite-ve-test",
+    "jobCount": 22,
+    "professionCount": 2,
+    "description": "Bu kategori 22 ilanı ve 2 alt mesleği bir araya getirir. Örneklemde Fonksiyonel, Mobil ve Manuel Test ve Test Otomasyonu, Planlama ve Yazılım Güvencesi başlıkları bulunur. Kategori genelinde CI/CD, DevOps ve Python en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "fonksiyonel-mobil-ve-manuel-test",
+      "test-otomasyonu-planlama-ve-yazilim-guvencesi"
+    ],
+    "topProfessions": [
+      {
+        "name": "Fonksiyonel, Mobil ve Manuel Test",
+        "slug": "fonksiyonel-mobil-ve-manuel-test",
+        "count": 13
+      },
+      {
+        "name": "Test Otomasyonu, Planlama ve Yazılım Güvencesi",
+        "slug": "test-otomasyonu-planlama-ve-yazilim-guvencesi",
+        "count": 9
+      }
+    ]
+  },
+  {
+    "name": "Üretim, Süreç ve Endüstri Mühendisliği",
+    "slug": "uretim-surec-ve-endustri-muhendisligi",
+    "jobCount": 22,
+    "professionCount": 2,
+    "description": "Bu kategori 22 ilanı ve 2 alt mesleği bir araya getirir. Örneklemde Üretim Mühendisliği ve Sistemleri ve İmalat ve Otomotiv Üretim Mühendisliği başlıkları bulunur. Kategori genelinde AutoCAD, SAP ve Agile en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "uretim-muhendisligi-ve-sistemleri",
+      "imalat-ve-otomotiv-uretim-muhendisligi"
+    ],
+    "topProfessions": [
+      {
+        "name": "Üretim Mühendisliği ve Sistemleri",
+        "slug": "uretim-muhendisligi-ve-sistemleri",
+        "count": 11
+      },
+      {
+        "name": "İmalat ve Otomotiv Üretim Mühendisliği",
+        "slug": "imalat-ve-otomotiv-uretim-muhendisligi",
+        "count": 11
+      }
+    ]
+  },
+  {
+    "name": "Ürün, İş Analizi ve Proje Yönetimi",
+    "slug": "urun-is-analizi-ve-proje-yonetimi",
+    "jobCount": 29,
+    "professionCount": 3,
+    "description": "Bu kategori 29 ilanı ve 3 alt mesleği bir araya getirir. Örneklemde Bankacılık ve Sigorta İş Analizi, Dijital Ürün Yönetimi ve Product Ownership ve Proje ve Program Yönetimi başlıkları bulunur. Kategori genelinde SQL, Agile ve Scrum en görünür araç ve yetkinlikler arasındadır. Sayfa içindeki filtre, meslek adı ve beceri metni üzerinden çalışır.",
+    "professionSlugs": [
+      "bankacilik-ve-sigorta-is-analizi",
+      "dijital-urun-yonetimi-ve-product-ownership",
+      "proje-ve-program-yonetimi"
+    ],
+    "topProfessions": [
+      {
+        "name": "Bankacılık ve Sigorta İş Analizi",
+        "slug": "bankacilik-ve-sigorta-is-analizi",
+        "count": 10
+      },
+      {
+        "name": "Dijital Ürün Yönetimi ve Product Ownership",
+        "slug": "dijital-urun-yonetimi-ve-product-ownership",
+        "count": 10
+      },
+      {
+        "name": "Proje ve Program Yönetimi",
+        "slug": "proje-ve-program-yonetimi",
+        "count": 9
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ReportSection from '../components/ReportSection.astro';
+import audit from '../data/data-audit.json';
+import { withBase } from '../lib/site.js';
+---
+<BaseLayout title="Metodoloji ve veri" description="Meslek Talep Atlası veri kaynağı, tekilleştirme, sınıflandırma, oran hesaplama ve örneklem sınırlamaları." path="/metodoloji/">
+  <Breadcrumbs items={[{ label: 'Ana sayfa', href: withBase('/') }, { label: 'Metodoloji ve veri' }]} />
+  <header class="page-head"><div class="container reading"><p class="eyebrow">Yöntem</p><h1>Metodoloji ve veri hakkında</h1><p class="lead">Bu sayfa, raporların hangi veriyle ve hangi hesaplama kurallarıyla üretildiğini açıklar.</p></div></header>
+  <section class="section compact"><div class="container reading prose">
+    <ReportSection title="Veri kaynağı" id="veri-kaynagi">
+      <p>Ana kaynak, yüklenen paket içindeki <code>{audit.primarySource}</code> dosyasıdır. Dosya ana kategori, alt meslek ve ilan kayıtlarını aynı hiyerarşide tutar; başlık, şirket, konum, açıklama, gereksinim, sorumluluk, beceri, deneyim, eğitim, dil, sektör ve kaynak URL alanlarını birlikte içerir.</p>
+      <p>Paket filtre öncesi 809 ilanı özetler. Bunların 804'ü sınıflandırılmış, 5'i veri eksiği olarak işaretlenmiştir. En az 8 ilan eşiğini geçmeyen 55 alt meslek ve 290 ilan çıkarıldıktan sonra sitede 519 ilan, 44 alt meslek ve 17 ana kategori kalmıştır.</p>
+    </ReportSection>
+    <ReportSection title="Kapsanan dönem" id="donem">
+      <p>Kaynak pakette kesin toplama tarihi bulunmuyor. İlanlarda saat, gün ve hafta cinsinden göreli LinkedIn yayın etiketleri var. Bu nedenle analizler tek bir toplama dönemi olarak sunulur; belirli takvim tarihleri veya zaman içindeki artış ve azalış iddiaları üretilmez.</p>
+    </ReportSection>
+    <ReportSection title="Tekilleştirme ve sınıflandırma" id="tekillestirme">
+      <p>Kayıtlar önce <code>job_id</code>, ardından URL üzerinden kontrol edildi. Sitedeki 519 kaydın 519 benzersiz iş ilanı kimliği ve 519 benzersiz URL'si vardır. Kategori ve alt meslek etiketleri kaynak dosyadan alınmıştır; sitede yeni ilan veya sınıflandırma üretilmemiştir.</p>
+      <p>Beceri adlarında yalnızca açık eş anlamlılar normalleştirildi: örneğin JS ile JavaScript, AWS ile Amazon Web Services, GCP ile Google Cloud ve Dotnet ile .NET aynı başlık altında toplandı. Farklı teknolojiler benzer amaç taşıdıkları için birleştirilmedi. R&amp;D metinlerinden yanlışlıkla türeyebilen tek harfli R etiketi, açık R programlama bağlamı yoksa çıkarıldı.</p>
+    </ReportSection>
+    <ReportSection title="Oranlar nasıl hesaplandı?" id="oranlar">
+      <p>Genel beceri, tema, kariyer seviyesi, şirket ve konum oranlarında payda ilgili meslekteki tüm ilanlardır. Deneyim, eğitim ve dil gibi eksik olabilen alanlarda gerçek payda ayrıca belirtilir. Örneğin deneyim yılı yalnızca 10 ilanda varsa medyan ve ortalama bu 10 ilan üzerinden hesaplanır.</p>
+      <p>Görev temaları açıklama, gereksinim ve sorumluluk metinlerindeki anahtar kavramların ilan düzeyinde varlığıyla sayılmıştır. Aynı tema bir ilanda birçok kez geçse bile o ilan için bir kez sayılır. Birlikte talep edilen beceri paketleri, aynı ilanda yer alan normalize edilmiş beceri çiftlerinden üretilir.</p>
+    </ReportSection>
+    <ReportSection title="Örneklem sınırlamaları" id="sinirlamalar">
+      <div class="notice"><strong>Bu çalışma resmi iş gücü istatistiği değildir.</strong> LinkedIn'de görünen, pakete alınan ve en az 8 ilan eşiğini geçen mesleklerden oluşan bir örneklemdir.</div>
+      <p>İlan metinleri şirketlerin yazım tercihlerini, tekrarlarını ve eksik alanlarını taşır. Belirtilmeyen bir beceri veya eğitim düzeyi, aranmadığı anlamına gelmez. Başvuru sayısı etiketleri gerçek aday kalitesini, işe alınma olasılığını veya tamamlanmış başvuru sayısını ölçmez. Küçük alt gruplarda tek bir şirket veya sektör genel görünümü etkileyebilir.</p>
+    </ReportSection>
+    <ReportSection title="Dosya envanteri" id="dosyalar">
+      <div class="table-wrap"><table><thead><tr><th>Dosya</th><th>Biçim</th><th>Kayıt</th><th>Kullanım</th></tr></thead><tbody>
+        {audit.availableFiles.map((file) => <tr><td><code>{file.name}</code></td><td>{file.format}</td><td>{file.records ?? '-'}</td><td>{file.role}</td></tr>)}
+      </tbody></table></div>
+    </ReportSection>
+  </div></section>
+</BaseLayout>

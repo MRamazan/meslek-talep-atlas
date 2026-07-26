@@ -1,0 +1,82 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import StatItem from '../../components/StatItem.astro';
+import SkillList from '../../components/SkillList.astro';
+import RelatedProfessions from '../../components/RelatedProfessions.astro';
+import professions from '../../data/professions.json';
+import { withBase } from '../../lib/site.js';
+
+export async function getStaticPaths() {
+  const reports = await getCollection('reports');
+  return reports.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const profession = professions.find((item) => item.slug === entry.data.slug);
+if (!profession) throw new Error(`Meslek verisi bulunamadı: ${entry.data.slug}`);
+const sources = profession.sourceJobs;
+---
+<BaseLayout title={entry.data.title} description={entry.data.description} path={`/meslek/${entry.data.slug}/`} type="article">
+  <Breadcrumbs items={[
+    { label: 'Ana sayfa', href: withBase('/') },
+    { label: entry.data.category, href: withBase(`/kategori/${entry.data.categorySlug}/`) },
+    { label: entry.data.title },
+  ]} />
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow">Meslek analizi</p>
+      <h1>{entry.data.title}</h1>
+      <p class="lead">{entry.data.description}</p>
+    </div>
+  </header>
+  <section class="section compact">
+    <div class="container stats">
+      <StatItem value={entry.data.jobCount} label="incelenen ilan" />
+      <StatItem value={profession.companies.length} label="öne çıkan şirket" />
+      <StatItem value={profession.topSkills.length} label="raporlanan beceri" />
+      <StatItem value={entry.data.wordCount} label="analiz kelimesi" />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container content-layout">
+      <article class="prose reading"><Content /></article>
+      <aside class="sidebar" aria-label="Rapor özeti">
+        <div class="sidebar-block">
+          <h2 class="sidebar-title">Öne çıkan beceriler</h2>
+          <SkillList skills={profession.topSkills.slice(0, 8)} />
+        </div>
+        <div class="sidebar-block">
+          <h2 class="sidebar-title">İlgili meslekler</h2>
+          <RelatedProfessions professions={profession.related} />
+        </div>
+        <div class="sidebar-block">
+          <h2 class="sidebar-title">Veri dönemi</h2>
+          <p class="muted">{entry.data.dataPeriod}</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+  {sources.length > 0 && (
+    <section class="section compact">
+      <div class="container reading">
+        <p class="eyebrow">Kaynak ilanlar</p>
+        <h2>İncelenen ilan bağlantıları</h2>
+        <p class="muted">Bağlantılar kaynak pakette URL bulunan ilanlara aittir ve zamanla erişilemez hale gelebilir.</p>
+        <ul class="source-list">
+          {sources.map((source) => (
+            <li>
+              <div>
+                <a class="source-title" href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+                <div class="source-meta">{source.company} · {source.location}</div>
+              </div>
+              <span class="badge">#{source.jobId}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+</BaseLayout>

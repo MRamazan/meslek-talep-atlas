@@ -1,0 +1,129 @@
+{
+  "sourcePackage": "linkedin_meslekler_minimum_8_ilan_paketi.zip",
+  "primarySource": "site_icin_minimum_8_ilanli_meslekler.json",
+  "primarySourceReason": "Ana kategori, alt meslek ve ilan kayıtlarını tek hiyerarşik yapıda; tam açıklama, gereksinim, sorumluluk, beceri, deneyim, eğitim, dil, sektör, şirket, konum ve URL alanlarıyla birlikte içerir.",
+  "totalJobs": 519,
+  "uniqueJobIds": 519,
+  "uniqueUrls": 519,
+  "categoryCount": 17,
+  "professionCount": 44,
+  "minimumProfessionJobs": 8,
+  "maximumProfessionJobs": 33,
+  "allProfessionsMeetThreshold": true,
+  "sourceMetadata": {
+    "toplam_ilan": 519,
+    "siniflandirilan_ilan": 804,
+    "veri_eksik_ilan": 5,
+    "ana_kategori_sayisi": 17,
+    "alt_meslek_sayisi": 44,
+    "rol_detayi_sayisi": 469,
+    "minimum_alt_meslek_ilan_sayisi": 8,
+    "kural": "Her ana kategori altındaki her alt meslekte en az 4 ilan bulunur.",
+    "filtre_kurali": "Yalnızca en az 8 ilana sahip alt meslekler tutulmuştur.",
+    "silinen_alt_meslek_sayisi": 55,
+    "silinen_ilan_sayisi": 290
+  },
+  "fieldCoverage": {
+    "skills": 441,
+    "experience_years_min": 312,
+    "education_levels": 214,
+    "language_requirements": 201,
+    "requirements_items": 264,
+    "responsibilities_items": 253,
+    "description_text": 519,
+    "industries": 519,
+    "url": 519
+  },
+  "availableFiles": [
+    {
+      "name": "site_icin_minimum_8_ilanli_meslekler.json",
+      "format": "JSON",
+      "records": 519,
+      "role": "Ana kaynak"
+    },
+    {
+      "name": "ilanlar_minimum_8_meslek.jsonl",
+      "format": "JSONL",
+      "records": 519,
+      "role": "Düz kayıt alternatifi"
+    },
+    {
+      "name": "ilanlar_minimum_8_meslek.csv",
+      "format": "CSV",
+      "records": 519,
+      "role": "Tablolu dışa aktarım"
+    },
+    {
+      "name": "minimum_8_meslek_taksonomisi.json",
+      "format": "JSON",
+      "records": 44,
+      "role": "Özet taksonomi"
+    },
+    {
+      "name": "silinen_meslekler.csv",
+      "format": "CSV",
+      "records": 55,
+      "role": "Filtre dışında kalan meslekler"
+    },
+    {
+      "name": "linkedin_meslekler_minimum_8_ilan.xlsx",
+      "format": "Excel",
+      "records": 519,
+      "role": "Özet ve çalışma sayfaları"
+    },
+    {
+      "name": "README.txt",
+      "format": "TXT",
+      "records": null,
+      "role": "Paket özeti"
+    }
+  ],
+  "reportWordCounts": {
+    "endustriyel-ar-ge-urun-ve-inovasyon-yonetimi": 660,
+    "ag-ve-telekom-sistemleri": 667,
+    "sistem-yonetimi-ve-altyapi": 681,
+    "bt-kullanici-ve-teknik-destek": 660,
+    "devops-muhendisligi": 648,
+    "bulut-muhendisligi-ve-cozum-mimarisi": 675,
+    "gomulu-sistemler-entegrasyon-ve-dogrulama": 676,
+    "elektrik-elektronik-ve-donanim-muhendisligi": 645,
+    "endustriyel-otomasyon-ve-robotik": 646,
+    "fp-a-butce-ve-yonetim-raporlama": 666,
+    "risk-denetim-ve-uyum": 638,
+    "kalite-muhendisligi-npi-ve-tasarim-kalitesi": 624,
+    "mekanik-tasarim-ve-urun-gelistirme": 657,
+    "musteri-hizmetleri-ve-destek": 664,
+    "grafik-ve-iletisim-tasarimi": 607,
+    "pazarlama-analitigi-icgoru-ve-performans": 656,
+    "teknik-satis-ve-cozum-muhendisligi": 666,
+    "b2b-satis-operasyon-ve-is-gelistirme": 636,
+    "bilgi-guvenligi-yonetisim-ve-uyum": 669,
+    "ag-guvenligi": 656,
+    "veri-analizi-is-analitigi-ve-danismanlik": 680,
+    "veri-bilimi": 659,
+    "veri-muhendisligi-platform-ve-veri-toplama": 679,
+    "ai-veri-egitim-ve-degerlendirme": 689,
+    "ai-ml-ve-urun-muhendisligi": 677,
+    "generative-ai-llm-ve-nlp": 675,
+    "mobil-uygulama-gelistirme": 670,
+    "genel-ve-web-full-stack-gelistirme": 677,
+    "oyun-yazilimi-ve-oyun-motorlari": 664,
+    "java-backend-gelistirme": 674,
+    "erp-sap-ve-uretim-sistemleri-gelistirme": 674,
+    "net-c-gelistirme": 667,
+    "net-full-stack-gelistirme": 651,
+    "dikey-sektor-ve-is-sistemleri-gelistirme": 659,
+    "yazilim-mimarisi-sistem-tasarimi-ve-genel-muhendislik": 676,
+    "backend-ve-api-gelistirme": 659,
+    "python-gelistirme": 644,
+    "fonksiyonel-mobil-ve-manuel-test": 657,
+    "test-otomasyonu-planlama-ve-yazilim-guvencesi": 675,
+    "uretim-muhendisligi-ve-sistemleri": 639,
+    "imalat-ve-otomotiv-uretim-muhendisligi": 664,
+    "bankacilik-ve-sigorta-is-analizi": 675,
+    "dijital-urun-yonetimi-ve-product-ownership": 687,
+    "proje-ve-program-yonetimi": 643
+  },
+  "reportWordCountMin": 607,
+  "reportWordCountMax": 689
+}

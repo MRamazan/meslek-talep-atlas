@@ -1,0 +1,12 @@
+---
+import { withBase } from '../lib/site.js';
+const { professions = [] } = Astro.props;
+---
+<ul class="related-list">
+  {professions.map((profession) => (
+    <li>
+      <a href={withBase(`/meslek/${profession.slug}/`)}>{profession.name}</a>
+      <span class="related-meta">{profession.category} · {profession.count} ilan</span>
+    </li>
+  ))}
+</ul>

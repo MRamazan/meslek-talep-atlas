@@ -1,0 +1,12 @@
+---
+import { siteConfig, withBase } from '../lib/site.js';
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={withBase('/')}>{siteConfig.name}</a>
+    <nav class="nav" aria-label="Ana gezinme">
+      <a href={withBase('/')}>Kategoriler</a>
+      <a href={withBase('/metodoloji/')}>Metodoloji</a>
+    </nav>
+  </div>
+</header>

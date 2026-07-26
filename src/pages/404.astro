@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/site.js';
+---
+<BaseLayout title="Sayfa bulunamadı" description="Aradığınız sayfa bulunamadı." path="/404/">
+  <section class="section"><div class="container reading"><p class="eyebrow">404</p><h1>Sayfa bulunamadı.</h1><p class="lead">Bağlantı değişmiş veya adres hatalı olabilir.</p><p><a href={withBase('/')}>Ana sayfadaki kategorilere dönün</a></p></div></section>
+</BaseLayout>

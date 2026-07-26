@@ -1,0 +1,4 @@
+---
+const { id = 'empty-state', message = 'Aramanızla eşleşen içerik bulunamadı.' } = Astro.props;
+---
+<div class="empty-state" id={id} hidden><p>{message}</p></div>

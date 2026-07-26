@@ -1,0 +1,9 @@
+---
+interface Props { id: string; label: string; placeholder: string; help?: string; }
+const { id, label, placeholder, help } = Astro.props;
+---
+<div class="search-panel">
+  <label class="search-label" for={id}>{label}</label>
+  <input class="search-input" id={id} type="search" placeholder={placeholder} autocomplete="off" aria-describedby={help ? `${id}-help` : undefined} />
+  {help && <p class="search-help" id={`${id}-help`}>{help}</p>}
+</div>

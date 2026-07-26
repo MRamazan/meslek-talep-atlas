@@ -1,0 +1,8 @@
+---
+const { skills = [] } = Astro.props;
+---
+{skills.length ? (
+  <ul class="skill-list">
+    {skills.map((skill) => <li class="badge">{skill.name} · {skill.count}</li>)}
+  </ul>
+) : <p class="muted">Yapılandırılmış beceri alanında yeterli veri yok.</p>}

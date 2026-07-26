@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import SearchBox from '../components/SearchBox.astro';
+import StatItem from '../components/StatItem.astro';
+import EmptyState from '../components/EmptyState.astro';
+import categories from '../data/categories.json';
+import audit from '../data/data-audit.json';
+import { withBase } from '../lib/site.js';
+---
+<BaseLayout title="Meslek Talep Atlası" description="519 LinkedIn ilanından üretilmiş 17 kategori ve 44 meslek için işveren beklentisi analizleri." path="/">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">İş ilanı verisiyle meslek analizi</p>
+        <h1>Meslek talebini ilanların gerçek içeriğinden okuyun.</h1>
+        <p class="lead">Ana kategoriden mesleğe ilerleyin; teknik becerileri, birlikte istenen yetkinlikleri, sorumlulukları ve giriş bariyerlerini karşılaştırın.</p>
+        <SearchBox id="site-search" label="Kategori veya meslek ara" placeholder="Örnek: veri bilimi, Java, siber güvenlik" help="Arama kategori adlarını, meslekleri ve öne çıkan becerileri tarar." />
+      </div>
+      <aside class="hero-note">
+        <p><strong>Veri kapsamı</strong></p>
+        <p>Kaynak pakette kesin toplama tarihi verilmemiştir. İlanlar tek dönemlik bir örneklem olarak değerlendirilir; zaman serisi yorumu yapılmaz.</p>
+        <a href={withBase('/metodoloji/')}>Yöntemi ve sınırlamaları inceleyin</a>
+      </aside>
+    </div>
+  </section>
+  <section class="section compact">
+    <div class="container stats" aria-label="Veri özeti">
+      <StatItem value={audit.totalJobs} label="tekil ilan" />
+      <StatItem value={audit.categoryCount} label="ana kategori" />
+      <StatItem value={audit.professionCount} label="alt meslek" />
+      <StatItem value="8+" label="meslek başına ilan" />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div><p class="eyebrow">Kategoriler</p><h2>17 ana kategori</h2></div><p>Toplam {audit.totalJobs} ilan</p></div>
+      <div class="grid categories" id="category-grid">
+        {categories.map((category) => <CategoryCard category={category} />)}
+      </div>
+      <EmptyState id="category-empty" />
+    </div>
+  </section>
+  <script is:inline>
+    (() => {
+      const input = document.querySelector('#site-search');
+      const items = [...document.querySelectorAll('[data-filter-item]')];
+      const empty = document.querySelector('#category-empty');
+      if (!input) return;
+      const normalize = (value) => value.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      input.addEventListener('input', () => {
+        const query = normalize(input.value.trim());
+        let visible = 0;
+        items.forEach((item) => {
+          const match = !query || normalize(item.dataset.search || '').includes(query);
+          item.hidden = !match;
+          if (match) visible += 1;
+        });
+        if (empty) empty.hidden = visible !== 0;
+      });
+    })();
+  </script>
+</BaseLayout>

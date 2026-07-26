@@ -1,0 +1,19 @@
+{
+  "name": "meslek-talep-atlasi",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/validate-build.mjs",
+    "preview": "astro preview",
+    "check:data": "python3 scripts/validate-data.py",
+    "build:offline-check": "python3 scripts/fallback-build.py && node scripts/validate-build.mjs"
+  },
+  "dependencies": {
+    "astro": "7.1.3"
+  }
+}
