@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /REPOSITORY_NAME/
+Sitemap: https://GITHUB_USERNAME.github.io/REPOSITORY_NAME/sitemap.xml
